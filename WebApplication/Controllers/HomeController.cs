@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using WebApplication.Properties;
 
 namespace WebApplication.Controllers
 {
@@ -10,6 +11,7 @@ namespace WebApplication.Controllers
     {
         public ActionResult Index()
         {
+            ViewBag.Env = Settings.Default.Env;
             return View();
         }
 
